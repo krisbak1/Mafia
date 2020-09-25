@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/select_all_players"
+        android:title="Select all players"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/deselect_all"
+        android:title="Deselect all players"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/delete_all_players"
+        android:title="Delete all players"
+        app:showAsAction="never" />
+
+</menu>

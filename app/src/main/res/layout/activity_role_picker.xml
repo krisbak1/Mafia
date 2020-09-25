@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mafia.RolePicker.RoleRandomActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/role_recycler_view_town"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35dp"
+                android:foregroundGravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/textViewMafia"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTown"
+                tools:listitem="@layout/recycler_view_item" />
+
+            <TextView
+                android:id="@+id/textViewTown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="11dp"
+                android:paddingStart="8dp"
+                android:text="Town roles:"
+                android:textAppearance
+                    ="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBottom_toTopOf
+                ="@+id/role_recycler_view_town"
+                app:layout_constraintStart_toStartOf
+                ="@+id/role_recycler_view_town"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/role_recycler_view_mafia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35dp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewNeutral"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMafia"
+                tools:listitem="@layout/recycler_view_item" />
+
+            <TextView
+                android:id="@+id/textViewMafia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                android:paddingStart="8dp"
+                android:text="Mafia roles:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBottom_toTopOf
+                ="@+id/role_recycler_view_mafia"
+                app:layout_constraintStart_toStartOf
+                ="@+id/role_recycler_view_mafia"
+                app:layout_constraintTop_toBottomOf
+                ="@+id/role_recycler_view_town" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/role_recycler_view_neutral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNeutral"
+                tools:listitem="@layout/recycler_view_item" />
+
+            <TextView
+                android:id="@+id/textViewNeutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="8dp"
+                android:text="Neutral roles:"
+                android:textAppearance
+                ="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBottom_toTopOf
+                ="@+id/role_recycler_view_neutral"
+                app:layout_constraintStart_toStartOf
+                ="@+id/role_recycler_view_neutral"
+                app:layout_constraintTop_toBottomOf
+                ="@+id/role_recycler_view_mafia" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_next_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="32dp"
+        android:src="@drawable/ic_next"
+        app:backgroundTint="#FF1D48E6" />
+</RelativeLayout>
+
